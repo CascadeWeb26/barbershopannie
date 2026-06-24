@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Barbershop Annie — Coiffeur Barbier à Sept-Îles, Québec</title>
+  <meta name="description" content="Barbershop Annie à Sept-Îles — coupe de cheveux hommes, taille de barbe et rasage à la lame. Service professionnel, ambiance détendue. Prenez rendez-vous en ligne.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0f0f0f">
+  <link rel="icon" href="images/logo-removebg-preview.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/logo-removebg-preview.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_CA">
+  <meta property="og:title" content="Barbershop Annie — Coiffeur Barbier à Sept-Îles, Québec">
+  <meta property="og:description" content="Coupes précises, taille de barbe et rasage professionnel à Sept-Îles, QC. Prenez rendez-vous en ligne.">
+  <meta property="og:site_name" content="Barbershop Annie">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Barbershop Annie — Coiffeur Barbier à Sept-Îles, Québec">
+  <meta name="twitter:description" content="Coupes précises, taille de barbe et rasage professionnel à Sept-Îles, Québec.">
+
+  <!-- Local Business Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "Barbershop Annie",
+    "description": "Salon de barbier à Sept-Îles offrant des coupes de cheveux hommes, taille de barbe et rasage professionnel.",
+    "telephone": "+14189602558",
+    "url": "https://barbershop-annie.square.site",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "452 Av. Brochu",
+      "addressLocality": "Sept-Îles",
+      "addressRegion": "QC",
+      "postalCode": "G4R 2W8",
+      "addressCountry": "CA"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "24"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday",   "opens": "08:00", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "08:00", "closes": "20:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday",  "opens": "08:00", "closes": "20:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday",    "opens": "08:00", "closes": "18:00" }
+    ],
+    "priceRange": "$$",
+    "currenciesAccepted": "CAD",
+    "paymentAccepted": "Cash, Credit Card"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { background: #f8f7f4; overflow-x: hidden; font-family: 'Libre Baskerville', serif; color: #0f0f0f; }
+    a { text-decoration: none; color: inherit; }
+    h1, h2, h3 { font-size: inherit; font-weight: inherit; margin: 0; }
+
+    @keyframes heroUp {
+      from { opacity: 0; transform: translateY(52px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes heroIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes poleSpin {
+      from { transform: translateY(0); }
+      to   { transform: translateY(-50%); }
+    }
+    @keyframes runTicker {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* Nav links */
+    .nav-link {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: white; }
+
+    /* Gold CTA button */
+    .btn-gold {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      background: #b8935a;
+      color: white;
+      display: inline-block;
+      transition: background 0.2s;
+    }
+    .btn-gold:hover { background: #ca9f60; }
+
+    /* Dark inline button */
+    .btn-dark {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      background: #0f0f0f;
+      color: white;
+      display: block;
+      text-align: center;
+      transition: background 0.2s;
+    }
+    .btn-dark:hover { background: #1e1e1e; }
+
+    /* Google review button */
+    .btn-google {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      background: #1c1c1c;
+      color: white;
+      border: 1px solid rgba(184,147,90,0.45);
+      padding: 17px 36px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .btn-google:hover { background: #252525; border-color: #b8935a; }
+
+    /* Gallery */
+    .gallery-item { overflow: hidden; cursor: pointer; }
+    .gallery-inner {
+      width: 100%;
+      height: 420px;
+      background: #1e1e1e;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: transform 0.5s ease;
+      position: relative;
+    }
+    .gallery-item:hover .gallery-inner { transform: scale(1.04); }
+    .gallery-inner img.photo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Lightbox close */
+    #lightbox-close { opacity: 0.6; transition: opacity 0.2s; cursor: pointer; }
+    #lightbox-close:hover { opacity: 1; }
+
+    /* Phone link hover */
+    .phone-link { transition: color 0.2s; }
+    .phone-link:hover { color: #b8935a; }
+
+    /* Logo fallback when image is missing */
+    .logo-img { display: inline-block; }
+    .logo-img[data-missing] {
+      width: 46px; height: 46px; border-radius: 50%;
+      background: #b8935a; display: inline-flex;
+      align-items: center; justify-content: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: 20px; color: white;
+    }
+
+    /* Scroll reveal */
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    [data-reveal].revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── STICKY MOBILE BAR ─── */
+    .mobile-cta-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      grid-template-columns: 1fr 1fr;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .mobile-cta-bar a {
+      padding: 18px 12px;
+      text-align: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      display: block;
+    }
+    .mobile-cta-bar .bar-call {
+      background: #1c1c1c;
+      color: white;
+      border-right: 1px solid rgba(255,255,255,0.08);
+    }
+    .mobile-cta-bar .bar-book {
+      background: #b8935a;
+      color: #0f0f0f;
+    }
+
+    /* ─── HAMBURGER NAV ─── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 201;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: white;
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: #0a0a0a;
+      z-index: 150;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 48px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: white;
+      transition: color 0.2s;
+    }
+    .nav-mobile a:hover, .nav-mobile a:active { color: #b8935a; }
+    .nav-mobile .btn-gold {
+      font-size: 16px;
+      padding: 18px 48px;
+      margin-top: 8px;
+    }
+
+    /* ─── RESPONSIVE — TABLET ─── */
+    @media (max-width: 1024px) {
+      h1 span:first-child, h1 span:nth-child(2) { font-size: 100px !important; }
+      h1 span:nth-child(3) { font-size: 132px !important; }
+      h2 { font-size: 52px !important; }
+      .cta-title { font-size: 64px !important; }
+    }
+
+    /* ─── RESPONSIVE — MOBILE ─── */
+    @media (max-width: 768px) {
+      /* STICKY BAR */
+      .mobile-cta-bar { display: grid !important; }
+      body { padding-bottom: 58px; }
+
+      /* NAV */
+      #site-nav { padding: 0 20px !important; }
+      .nav-desktop-links { display: none !important; }
+      .nav-hamburger { display: flex !important; }
+      .nav-logo-text { display: none !important; }
+
+      /* HERO */
+      #accueil { min-height: 100svh !important; align-items: center !important; }
+      .hero-inner {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 130px 20px 60px !important;
+        justify-content: flex-start !important;
+      }
+      .hero-barber-pole { display: none !important; }
+      h1 span:first-child, h1 span:nth-child(2) { font-size: 96px !important; }
+      h1 span:nth-child(3) { font-size: 128px !important; }
+
+      /* HEADINGS */
+      h2 { font-size: 40px !important; }
+
+      /* SECTIONS PADDING */
+      #services  { padding: 72px 20px !important; }
+      #coupes    { padding: 72px 20px !important; }
+      #equipe    { padding: 72px 20px !important; }
+      #avis      { padding: 72px 20px !important; }
+      .cta-band  { padding: 48px 20px !important; }
+      .cta-title { font-size: 48px !important; line-height: 0.92 !important; }
+
+      /* SERVICES GRID */
+      .services-grid { grid-template-columns: 1fr !important; }
+      .svc-divider   { display: none !important; }
+      .services-col-1 { padding-right: 0 !important; padding-bottom: 48px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+      .services-col-2 { padding: 48px 0 !important; border-bottom: 1px solid rgba(0,0,0,0.08); }
+      .services-col-3 { padding-left: 0 !important; padding-top: 48px; }
+
+      /* GALLERY */
+      .gallery-grid { grid-template-columns: 1fr 1fr !important; }
+      .gallery-inner { height: 180px !important; }
+
+      /* TEAM */
+      .team-grid { grid-template-columns: 1fr !important; }
+      .team-photo { height: 260px !important; }
+      .team-text  { padding: 40px 24px !important; }
+
+      /* REVIEWS */
+      .avis-header { flex-direction: column !important; align-items: flex-start !important; gap: 24px !important; margin-bottom: 40px !important; }
+      #reviews-grid { grid-template-columns: 1fr !important; }
+
+      /* FOOTER */
+      #contact    { padding: 0 !important; }
+      .footer-grid { grid-template-columns: 1fr !important; gap: 0 !important; padding-bottom: 0 !important; border-bottom: none !important; }
+      .footer-col  { padding: 48px 20px !important; border-bottom: 1px solid rgba(255,255,255,0.07); }
+      .footer-bottom { padding: 28px 20px !important; flex-direction: column !important; gap: 12px !important; text-align: center; }
+
+      /* BUTTONS */
+      .btn-gold, .btn-dark { display: block; text-align: center; }
+      #accueil .btn-gold { display: none !important; }
+    }
+
+    @media (max-width: 420px) {
+      h1 span:first-child, h1 span:nth-child(2) { font-size: 80px !important; }
+      h1 span:nth-child(3) { font-size: 108px !important; }
+      h2 { font-size: 34px !important; }
+      .cta-title { font-size: 38px !important; }
+      .gallery-grid { grid-template-columns: 1fr !important; }
+      .gallery-inner { height: 220px !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ NAV ══ -->
+  <nav id="site-nav" style="position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 74px; display: flex; align-items: center; padding: 0 60px; background: transparent; transition: background 0.45s ease, box-shadow 0.45s ease;">
+    <div style="max-width: 1200px; margin: 0 auto; width: 100%; display: flex; align-items: center; justify-content: space-between;">
+      <a href="#accueil" style="display: flex; align-items: center; gap: 12px;">
+        <img src="images/logo-removebg-preview.png" alt="Logo Barbershop Annie" class="logo-img" onerror="this.setAttribute('data-missing','');this.removeAttribute('src');" style="width: 46px; height: 46px; border-radius: 50%; object-fit: cover; flex-shrink: 0;">
+        <span class="nav-logo-text" style="font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 20px; letter-spacing: 0.22em; color: white; text-transform: uppercase;">Barbershop Annie</span>
+      </a>
+      <div class="nav-desktop-links" style="display: flex; align-items: center; gap: 44px;">
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#avis" class="nav-link">Avis</a>
+        <span style="width: 1px; height: 18px; background: rgba(255,255,255,0.18); display: inline-block; flex-shrink: 0;"></span>
+        <a href="tel:4189602558" class="nav-link" style="color: rgba(255,255,255,0.8); font-size: 15px; letter-spacing: 0.08em; display: flex; align-items: center; gap: 7px;"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="opacity:0.7"><path stroke-linecap="round" stroke-linejoin="round" d="M2 3h4l2 5-2.5 1.5a11 11 0 005 5L12 12l5 2v4a1 1 0 01-1 1C6.82 19 1 13.18 1 7a1 1 0 011-1z"/></svg>418-960-2558</a>
+        <a href="https://barbershop-annie.square.site/?utm_id=97758_v0_s00_e0_tv0" target="_blank" rel="noopener" class="btn-gold" style="padding: 13px 26px;">Prendre rendez-vous</a>
+      </div>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile nav overlay -->
+  <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+    <a href="#services">Services</a>
+    <a href="#avis">Avis</a>
+    <a href="#contact">Contact</a>
+    <a href="https://barbershop-annie.square.site/?utm_id=97758_v0_s00_e0_tv0" target="_blank" rel="noopener" class="btn-gold">Prendre rendez-vous</a>
+  </div>
+
+  <!-- ══ HERO ══ -->
+  <section id="accueil" style="position: relative; height: 100vh; min-height: 720px; background: #0f0f0f; display: flex; align-items: center; overflow: hidden;">
+    <img src="images/photo-ext.png" alt="Devanture du Barbershop Annie à Sept-Îles" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0.28; z-index: 0; pointer-events: none;">
+    <div style="position: absolute; inset: 0; background: linear-gradient(105deg, rgba(15,15,15,0.95) 38%, rgba(15,15,15,0.5) 100%); z-index: 0;"></div>
+
+    <div class="hero-inner" style="max-width: 1200px; margin: 0 auto; padding: 0 60px; width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 60px; position: relative; z-index: 1;">
+
+      <!-- Text block -->
+      <div style="flex: 1; min-width: 0;">
+        <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.55em; text-transform: uppercase; color: #b8935a; margin-bottom: 28px; animation: heroUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.15s both;">— Sept-Îles, Québec</div>
+        <h1>
+        <span style="display: block; font-family: 'Barlow Condensed', sans-serif; font-size: 116px; font-weight: 900; line-height: 0.88; text-transform: uppercase; letter-spacing: -0.01em; -webkit-text-stroke: 1.5px rgba(255,255,255,0.38); color: transparent; animation: heroUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.28s both;">Barber</span>
+        <span style="display: block; font-family: 'Barlow Condensed', sans-serif; font-size: 116px; font-weight: 900; line-height: 0.88; text-transform: uppercase; letter-spacing: -0.01em; -webkit-text-stroke: 1.5px rgba(255,255,255,0.38); color: transparent; animation: heroUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.38s both;">Shop</span>
+        <span style="display: block; font-family: 'Barlow Condensed', sans-serif; font-size: 152px; font-weight: 900; line-height: 0.88; text-transform: uppercase; letter-spacing: -0.01em; color: white; animation: heroUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.48s both;">Annie</span>
+        </h1>
+        <div style="display: flex; align-items: center; gap: 18px; margin-top: 38px; margin-bottom: 48px; animation: heroIn 0.9s ease 0.85s both;">
+          <div style="width: 40px; height: 1px; background: rgba(255,255,255,0.2);"></div>
+          <span style="font-family: 'Libre Baskerville', serif; font-size: 15px; font-style: italic; color: rgba(255,255,255,0.48);">Coupes précises. Style authentique.</span>
+        </div>
+        <a href="https://barbershop-annie.square.site/?utm_id=97758_v0_s00_e0_tv0" target="_blank" rel="noopener" class="btn-gold" style="padding: 17px 42px; animation: heroIn 0.9s ease 1.05s both;">Prendre rendez-vous</a>
+      </div>
+
+      <!-- Barber pole -->
+      <div class="hero-barber-pole" style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; animation: heroIn 1s ease 0.55s both;">
+        <div style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(145deg, #d8d8d8 0%, #888 100%); box-shadow: 0 4px 16px rgba(0,0,0,0.65);"></div>
+        <div style="width: 32px; height: 420px; border-radius: 3px; overflow: hidden; box-shadow: -4px 0 14px rgba(0,0,0,0.55), 3px 0 8px rgba(0,0,0,0.3);">
+          <div style="width: 100%; height: 200%; background: repeating-linear-gradient(15deg, #c41e1e 0px, #c41e1e 11px, #efefef 11px, #efefef 22px, #003087 22px, #003087 33px, #efefef 33px, #efefef 44px); animation: poleSpin 6s linear infinite;"></div>
+        </div>
+        <div style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(145deg, #d8d8d8 0%, #888 100%); box-shadow: 0 -4px 16px rgba(0,0,0,0.65);"></div>
+      </div>
+    </div>
+
+    <!-- Bottom strip -->
+    <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 52px; border-top: 1px solid rgba(255,255,255,0.07); display: flex; align-items: center; padding: 0 60px;">
+      <div style="max-width: 1200px; margin: 0 auto; width: 100%; display: flex; justify-content: space-between;">
+        <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: rgba(255,255,255,0.28);">452 Av. Brochu, Sept-Îles</span>
+        <a href="tel:4189602558" style="font-family: 'Barlow Condensed', sans-serif; font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: rgba(255,255,255,0.28);">418-960-2558</a>
+        <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: rgba(255,255,255,0.28);">Mar – Ven &nbsp;·&nbsp; 8h00 – 20h00</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ TICKER ══ -->
+  <div style="background: #b8935a; height: 50px; overflow: hidden; display: flex; align-items: center;">
+    <div style="display: flex; white-space: nowrap; animation: runTicker 22s linear infinite;">
+      <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.32em; text-transform: uppercase; color: rgba(255,255,255,0.88);">COUPE &nbsp;·&nbsp; DÉGRADÉ &nbsp;·&nbsp; BARBE &nbsp;·&nbsp; TAILLE &nbsp;·&nbsp; RASAGE &nbsp;·&nbsp; COMBO &nbsp;·&nbsp; PRÉCISION &nbsp;·&nbsp; STYLE &nbsp;·&nbsp; COUPE &nbsp;·&nbsp; DÉGRADÉ &nbsp;·&nbsp; BARBE &nbsp;·&nbsp; TAILLE &nbsp;·&nbsp; RASAGE &nbsp;·&nbsp; COMBO &nbsp;·&nbsp; PRÉCISION &nbsp;·&nbsp; STYLE &nbsp;·&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.32em; text-transform: uppercase; color: rgba(255,255,255,0.88);">COUPE &nbsp;·&nbsp; DÉGRADÉ &nbsp;·&nbsp; BARBE &nbsp;·&nbsp; TAILLE &nbsp;·&nbsp; RASAGE &nbsp;·&nbsp; COMBO &nbsp;·&nbsp; PRÉCISION &nbsp;·&nbsp; STYLE &nbsp;·&nbsp; COUPE &nbsp;·&nbsp; DÉGRADÉ &nbsp;·&nbsp; BARBE &nbsp;·&nbsp; TAILLE &nbsp;·&nbsp; RASAGE &nbsp;·&nbsp; COMBO &nbsp;·&nbsp; PRÉCISION &nbsp;·&nbsp; STYLE &nbsp;·&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- ══ SERVICES ══ -->
+  <section id="services" style="background: #f8f7f4; padding: 120px 60px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+
+      <div data-reveal data-reveal-delay="0" style="margin-bottom: 76px;">
+        <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.55em; text-transform: uppercase; color: #b8935a; margin-bottom: 14px;">Nos Services</div>
+        <h2 style="font-family: 'Barlow Condensed', sans-serif; font-size: 68px; font-weight: 900; line-height: 1; text-transform: uppercase; color: #0f0f0f;">Ce qu'on fait <span style="-webkit-text-stroke: 1.5px #0f0f0f; color: transparent; font-style: italic; font-weight: 700;">de mieux</span></h2>
+      </div>
+
+      <div class="services-grid" style="display: grid; grid-template-columns: 1fr 1px 1fr 1px 1fr;">
+
+        <!-- Coupes -->
+        <div class="services-col-1" data-reveal data-reveal-delay="0.1" style="padding-right: 64px;">
+          <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.5em; text-transform: uppercase; color: #b8935a; margin-bottom: 28px;">— Coupes</div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 20px 0; border-bottom: 1px solid rgba(0,0,0,0.09);">
+            <div>
+              <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 21px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Coupe de cheveux et laver</div>
+              <div style="font-family: 'Libre Baskerville', serif; font-size: 11px; font-style: italic; color: #999; margin-top: 3px;">Comprend un lavage</div>
+            </div>
+            <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 900; letter-spacing: -0.02em; flex-shrink: 0; margin-left: 16px;">33<span style="font-size: 14px; font-weight: 600;">$</span></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 20px 0; border-bottom: 1px solid rgba(0,0,0,0.09);">
+            <div>
+              <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 21px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Coupe cheveux hommes</div>
+            </div>
+            <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 900; letter-spacing: -0.02em; flex-shrink: 0; margin-left: 16px;">30<span style="font-size: 14px; font-weight: 600;">$</span></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 20px 0; border-bottom: 1px solid rgba(0,0,0,0.09);">
+            <div>
+              <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 21px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Coupe enfant</div>
+              <div style="font-family: 'Libre Baskerville', serif; font-size: 11px; font-style: italic; color: #999; margin-top: 3px;">12 ans et moins</div>
+            </div>
+            <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 900; letter-spacing: -0.02em; flex-shrink: 0; margin-left: 16px;">25<span style="font-size: 14px; font-weight: 600;">$</span></div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="svc-divider" style="background: rgba(0,0,0,0.09);"></div>
+
+        <!-- Barbe -->
+        <div class="services-col-2" data-reveal data-reveal-delay="0.2" style="padding: 0 64px;">
+          <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.5em; text-transform: uppercase; color: #b8935a; margin-bottom: 28px;">— Barbe</div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 20px 0; border-bottom: 1px solid rgba(0,0,0,0.09);">
+            <div>
+              <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 21px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Taille de barbe au clipper</div>
+            </div>
+            <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 900; letter-spacing: -0.02em; flex-shrink: 0; margin-left: 16px;">24<span style="font-size: 14px; font-weight: 600;">$</span></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 20px 0; border-bottom: 1px solid rgba(0,0,0,0.09);">
+            <div>
+              <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 21px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Rasage à l'ancienne</div>
+              <div style="font-family: 'Libre Baskerville', serif; font-size: 11px; font-style: italic; color: #999; margin-top: 3px;">Rasage classique à la lame</div>
+            </div>
+            <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 900; letter-spacing: -0.02em; flex-shrink: 0; margin-left: 16px;">30<span style="font-size: 14px; font-weight: 600;">$</span></div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="svc-divider" style="background: rgba(0,0,0,0.09);"></div>
+
+        <!-- Combos -->
+        <div class="services-col-3" data-reveal data-reveal-delay="0.3" style="padding-left: 64px;">
+          <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.5em; text-transform: uppercase; color: #b8935a; margin-bottom: 28px;">— Combo</div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 20px 0; border-bottom: 1px solid rgba(0,0,0,0.09);">
+            <div>
+              <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 21px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Combo coupe + rasage barbe</div>
+              <div style="font-family: 'Libre Baskerville', serif; font-size: 11px; font-style: italic; color: #999; margin-top: 3px;">Coupe et rasage à la lame</div>
+            </div>
+            <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 900; letter-spacing: -0.02em; flex-shrink: 0; margin-left: 16px;">48<span style="font-size: 14px; font-weight: 600;">$</span></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 20px 0; border-bottom: 1px solid rgba(0,0,0,0.09);">
+            <div>
+              <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 21px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Combo coupe + taille barbe clipper</div>
+              <div style="font-family: 'Libre Baskerville', serif; font-size: 11px; font-style: italic; color: #999; margin-top: 3px;">Coupe et taille au clipper</div>
+            </div>
+            <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 900; letter-spacing: -0.02em; flex-shrink: 0; margin-left: 16px;">40<span style="font-size: 14px; font-weight: 600;">$</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ NOS COUPES (Galerie) ══ -->
+  <section id="coupes" style="background: #111111; padding: 120px 60px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+
+      <div data-reveal data-reveal-delay="0" style="margin-bottom: 56px;">
+        <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.55em; text-transform: uppercase; color: #b8935a; margin-bottom: 14px;">Galerie</div>
+        <h2 style="font-family: 'Barlow Condensed', sans-serif; font-size: 64px; font-weight: 900; line-height: 1; text-transform: uppercase; color: white;">Nos <span style="-webkit-text-stroke: 1.5px rgba(255,255,255,0.4); color: transparent;">Coupes</span></h2>
+      </div>
+
+      <div class="gallery-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3px;">
+
+        <div class="gallery-item" data-slot="1">
+          <div class="gallery-inner">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="5" width="24" height="18" rx="1" stroke="rgba(255,255,255,0.2)" stroke-width="1.4"/><circle cx="9" cy="12" r="2.5" stroke="rgba(255,255,255,0.2)" stroke-width="1.4"/><path d="M2 21l7-5 5 4 4-3 8 6" stroke="rgba(255,255,255,0.2)" stroke-width="1.4" stroke-linejoin="round"/></svg>
+            <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(255,255,255,0.22);">Image 1</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-slot="2">
+          <div class="gallery-inner">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="5" width="24" height="18" rx="1" stroke="rgba(255,255,255,0.2)" stroke-width="1.4"/><circle cx="9" cy="12" r="2.5" stroke="rgba(255,255,255,0.2)" stroke-width="1.4"/><path d="M2 21l7-5 5 4 4-3 8 6" stroke="rgba(255,255,255,0.2)" stroke-width="1.4" stroke-linejoin="round"/></svg>
+            <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(255,255,255,0.22);">Image 2</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-slot="3">
+          <div class="gallery-inner">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="5" width="24" height="18" rx="1" stroke="rgba(255,255,255,0.2)" stroke-width="1.4"/><circle cx="9" cy="12" r="2.5" stroke="rgba(255,255,255,0.2)" stroke-width="1.4"/><path d="M2 21l7-5 5 4 4-3 8 6" stroke="rgba(255,255,255,0.2)" stroke-width="1.4" stroke-linejoin="round"/></svg>
+            <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(255,255,255,0.22);">Image 3</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-slot="4">
+          <div class="gallery-inner">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="5" width="24" height="18" rx="1" stroke="rgba(255,255,255,0.2)" stroke-width="1.4"/><circle cx="9" cy="12" r="2.5" stroke="rgba(255,255,255,0.2)" stroke-width="1.4"/><path d="M2 21l7-5 5 4 4-3 8 6" stroke="rgba(255,255,255,0.2)" stroke-width="1.4" stroke-linejoin="round"/></svg>
+            <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(255,255,255,0.22);">Image 4</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-slot="5">
+          <div class="gallery-inner">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="5" width="24" height="18" rx="1" stroke="rgba(255,255,255,0.2)" stroke-width="1.4"/><circle cx="9" cy="12" r="2.5" stroke="rgba(255,255,255,0.2)" stroke-width="1.4"/><path d="M2 21l7-5 5 4 4-3 8 6" stroke="rgba(255,255,255,0.2)" stroke-width="1.4" stroke-linejoin="round"/></svg>
+            <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(255,255,255,0.22);">Image 5</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-slot="6">
+          <div class="gallery-inner">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="5" width="24" height="18" rx="1" stroke="rgba(255,255,255,0.2)" stroke-width="1.4"/><circle cx="9" cy="12" r="2.5" stroke="rgba(255,255,255,0.2)" stroke-width="1.4"/><path d="M2 21l7-5 5 4 4-3 8 6" stroke="rgba(255,255,255,0.2)" stroke-width="1.4" stroke-linejoin="round"/></svg>
+            <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(255,255,255,0.22);">Image 6</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="coupe-lightbox" style="position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 2000; display: none; align-items: center; justify-content: center;">
+      <img id="lightbox-img" alt="Coupe" style="max-width: 88vw; max-height: 88vh; object-fit: contain; display: block;">
+      <div id="lightbox-close" style="position: absolute; top: 28px; right: 36px; font-family: 'Barlow Condensed', sans-serif; font-size: 32px; font-weight: 700; color: white; line-height: 1; user-select: none;">✕</div>
+    </div>
+  </section>
+
+  <!-- ══ NOTRE ÉQUIPE ══ -->
+  <section id="equipe" style="background: #0f0f0f; padding: 120px 60px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+
+      <div data-reveal data-reveal-delay="0" style="margin-bottom: 64px;">
+        <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.55em; text-transform: uppercase; color: #b8935a; margin-bottom: 14px;">L'équipe</div>
+        <h2 style="font-family: 'Barlow Condensed', sans-serif; font-size: 64px; font-weight: 900; line-height: 1; text-transform: uppercase; color: white;">Notre <span style="-webkit-text-stroke: 1.5px rgba(255,255,255,0.4); color: transparent;">Équipe</span></h2>
+      </div>
+
+      <div class="team-grid" data-reveal data-reveal-delay="0.1" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3px; border-top: 2px solid #b8935a;">
+
+        <!-- Photo de groupe -->
+        <div class="team-photo" style="height: 480px; background: #1c1c1c; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;">
+          <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+            <circle cx="16" cy="18" r="7" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+            <circle cx="36" cy="18" r="7" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+            <path d="M2 46c0-7.732 6.268-14 14-14h20c7.732 0 14 6.268 14 14" stroke="rgba(255,255,255,0.18)" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(255,255,255,0.2);">Photo de groupe</span>
+        </div>
+
+        <!-- Texte -->
+        <div class="team-text" style="background: #161616; padding: 52px 48px; display: flex; flex-direction: column; justify-content: center;">
+          <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.5em; text-transform: uppercase; color: #b8935a; margin-bottom: 16px;">Barbershop Annie — Sept-Îles</div>
+          <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 48px; font-weight: 900; text-transform: uppercase; color: white; line-height: 0.92; margin-bottom: 24px;">Une équipe<br><span style="-webkit-text-stroke: 1.5px rgba(255,255,255,0.35); color: transparent;">passionnée</span></div>
+          <p style="font-family: 'Libre Baskerville', serif; font-size: 14px; font-style: italic; color: rgba(255,255,255,0.5); line-height: 1.8; margin-bottom: 32px;">Des professionnels qui aiment leur métier et qui le font bien. Chaque visite au Barbershop Annie, c'est un service soigné, une ambiance détendue, et des résultats qui parlent d'eux-mêmes.</p>
+          <div style="display: flex; gap: 32px;">
+            <div>
+              <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 36px; font-weight: 900; color: #b8935a; line-height: 1;">2020</div>
+              <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.35em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-top: 4px;">Fondé</div>
+            </div>
+            <div style="width: 1px; background: rgba(255,255,255,0.08);"></div>
+            <div>
+              <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 36px; font-weight: 900; color: #b8935a; line-height: 1;">Sept-Îles</div>
+              <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.35em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-top: 4px;">Québec</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ AVIS ══ -->
+  <section id="avis" style="background: #111111; padding: 120px 60px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+
+      <div class="avis-header" data-reveal data-reveal-delay="0" style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; margin-bottom: 64px;">
+        <div>
+          <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.55em; text-transform: uppercase; color: #b8935a; margin-bottom: 14px;">Avis Clients</div>
+          <h2 style="font-family: 'Barlow Condensed', sans-serif; font-size: 64px; font-weight: 900; line-height: 1; text-transform: uppercase; color: white;">Ce qu'ils disent</h2>
+        </div>
+        <!-- Google badge -->
+        <div style="flex-shrink: 0; background: #1c1c1c; border: 1px solid rgba(184,147,90,0.35); padding: 18px 26px; display: flex; align-items: center; gap: 14px;">
+          <div style="font-size: 32px; font-weight: 900; font-family: sans-serif; background: linear-gradient(135deg,#4285f4 0%,#ea4335 45%,#fbbc04 72%,#34a853 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1;">G</div>
+          <div>
+            <div id="google-stars" style="color: #fbbc04; font-size: 18px; letter-spacing: 1px; line-height: 1; margin-bottom: 4px;">★★★★★</div>
+            <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 900; color: white; line-height: 1;"><span id="google-rating">4,8</span> <span style="font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.35);">/ 5</span></div>
+            <div style="font-family: 'Libre Baskerville', serif; font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 2px;">Avis Google</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="reviews-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+
+        <div data-reveal data-reveal-delay="0.1" style="background: #1c1c1c; padding: 36px; border-top: 2px solid #b8935a;">
+          <div style="color: #fbbc04; font-size: 16px; letter-spacing: 2px; margin-bottom: 20px;">★★★★★</div>
+          <p style="font-family: 'Libre Baskerville', serif; font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.68); font-style: italic; margin-bottom: 30px;">"Super service comme toujours et les sofas sont vraiment confo haha! :D"</p>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 38px; height: 38px; border-radius: 50%; background: #2a5298; display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 17px; color: white; flex-shrink: 0;">H</div>
+            <div>
+              <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0.06em; color: white; text-transform: uppercase;">Hellixeer</div>
+            </div>
+          </div>
+        </div>
+
+        <div data-reveal data-reveal-delay="0.2" style="background: #1c1c1c; padding: 36px; border-top: 2px solid #b8935a;">
+          <div style="color: #fbbc04; font-size: 16px; letter-spacing: 2px; margin-bottom: 20px;">★★★★★</div>
+          <p style="font-family: 'Libre Baskerville', serif; font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.68); font-style: italic; margin-bottom: 30px;">"Simplement le meilleur salon en ville. Rapide et bien fait."</p>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 38px; height: 38px; border-radius: 50%; background: #1a7e35; display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 17px; color: white; flex-shrink: 0;">S</div>
+            <div>
+              <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0.06em; color: white; text-transform: uppercase;">Simon Poirier</div>
+            </div>
+          </div>
+        </div>
+
+        <div data-reveal data-reveal-delay="0.3" style="background: #1c1c1c; padding: 36px; border-top: 2px solid #b8935a;">
+          <div style="color: #fbbc04; font-size: 16px; letter-spacing: 2px; margin-bottom: 20px;">★★★★★</div>
+          <p style="font-family: 'Libre Baskerville', serif; font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.68); font-style: italic; margin-bottom: 30px;">"Annie est super professionnelle. Toujours parfait et l'ambiance est vraiment relaxe. Meilleur coiffeur à Sept-Îles!"</p>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 38px; height: 38px; border-radius: 50%; background: #7b1fa2; display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 17px; color: white; flex-shrink: 0;">M</div>
+            <div>
+              <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0.06em; color: white; text-transform: uppercase;">Marie-Claude B.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA avis Google -->
+      <div style="text-align: center; margin-top: 56px;">
+        <div style="font-family: 'Libre Baskerville', serif; font-size: 13px; font-style: italic; color: rgba(255,255,255,0.35); margin-bottom: 20px;">Vous avez aimé votre visite? Ça nous aide énormément.</div>
+        <a id="review-link" href="https://www.google.com/search?q=barbershop+annie#lrd=0x4c91df3e6413a7e5:0x4baa886f0eac4810,3,,,," target="_blank" rel="noopener" class="btn-google">
+          <span style="font-size: 20px; font-weight: 900; font-family: sans-serif; background: linear-gradient(135deg, #4285f4 0%, #ea4335 45%, #fbbc04 72%, #34a853 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; flex-shrink: 0;">G</span>
+          Laisser un avis Google ★
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CTA BAND ══ -->
+  <div class="cta-band" style="background: #0f0f0f; padding: 100px 60px; text-align: center; border-top: 1px solid rgba(255,255,255,0.06);">
+    <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.55em; text-transform: uppercase; color: #b8935a; margin-bottom: 20px;">Sept-Îles, Québec</div>
+    <div class="cta-title" style="font-family: 'Barlow Condensed', sans-serif; font-size: 88px; font-weight: 900; text-transform: uppercase; line-height: 0.88; margin-bottom: 40px; letter-spacing: -0.01em; color: white;">Venez nous voir<br><span style="-webkit-text-stroke: 1.5px rgba(255,255,255,0.4); color: transparent;">en personne</span></div>
+  </div>
+
+  <!-- ══ FOOTER / CONTACT ══ -->
+  <footer id="contact" style="background: #0f0f0f; padding: 100px 60px 48px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+
+      <div class="footer-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 56px; padding-bottom: 72px; border-bottom: 1px solid rgba(255,255,255,0.07);">
+
+        <!-- Horaires -->
+        <div class="footer-col">
+          <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.5em; text-transform: uppercase; color: #b8935a; margin-bottom: 28px;">Horaires</div>
+          <div style="display: flex; flex-direction: column; gap: 11px;">
+            <div style="display: flex; justify-content: space-between;">
+              <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.3);">Lundi</span>
+              <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.18);">Fermé</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.72);">Mardi</span>
+              <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; color: white;">8h00 – 18h00</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.72);">Mercredi</span>
+              <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; color: white;">8h00 – 20h00</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.72);">Jeudi</span>
+              <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; color: white;">8h00 – 20h00</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.72);">Vendredi</span>
+              <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; color: white;">8h00 – 18h00</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.3);">Samedi</span>
+              <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.18);">Fermé</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.3);">Dimanche</span>
+              <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.18);">Fermé</span>
+            </div>
+          </div>
+          <div style="font-family: 'Libre Baskerville', serif; font-size: 11px; font-style: italic; color: rgba(255,255,255,0.22); margin-top: 16px; line-height: 1.5;">* Horaires pouvant varier lors des jours fériés</div>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.5em; text-transform: uppercase; color: #b8935a; margin-bottom: 28px;">Nous trouver</div>
+          <div style="font-family: 'Libre Baskerville', serif; font-size: 15px; line-height: 1.8; color: rgba(255,255,255,0.6); margin-bottom: 24px;">452 Av. Brochu<br>Sept-Îles, Québec</div>
+          <a href="tel:4189602558" class="phone-link" style="display: block; font-family: 'Barlow Condensed', sans-serif; font-size: 26px; font-weight: 700; letter-spacing: 0.04em; color: white;">418-960-2558</a>
+        </div>
+
+        <!-- CTA box -->
+        <div class="footer-col" style="background: #b8935a; padding: 44px 36px; display: flex; flex-direction: column; justify-content: space-between; min-height: 260px;">
+          <div>
+            <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 38px; font-weight: 900; text-transform: uppercase; color: #0f0f0f; line-height: 1.05; margin-bottom: 14px;">Prêt à être stylé?</div>
+            <p style="font-family: 'Libre Baskerville', serif; font-size: 13px; font-style: italic; color: rgba(0,0,0,0.52); line-height: 1.65;">Par téléphone ou en personne — on vous attend.</p>
+          </div>
+          <a href="https://barbershop-annie.square.site/?utm_id=97758_v0_s00_e0_tv0" class="btn-dark" style="padding: 15px 24px; margin-top: 32px;">Prendre rendez-vous en ligne →</a>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom" style="padding-top: 32px; display: flex; align-items: center; justify-content: space-between;">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <img src="images/logo-removebg-preview.png" alt="Logo Barbershop Annie" class="logo-img" onerror="this.setAttribute('data-missing','');this.removeAttribute('src');" style="width: 52px; height: 52px; border-radius: 50%; object-fit: cover; flex-shrink: 0; opacity: 0.85;">
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 900; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.72);">Barbershop Annie</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 6px;">
+          <div style="font-family: 'Libre Baskerville', serif; font-size: 11px; color: rgba(255,255,255,0.17);">© 2026 Barbershop Annie — Sept-Îles, Québec</div>
+          <a href="https://cascadewebagence.com" target="_blank" rel="noopener" style="font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.22); transition: color 0.2s;" onmouseover="this.style.color='rgba(184,147,90,0.7)'" onmouseout="this.style.color='rgba(255,255,255,0.22)'">Propulsé par Cascade Web</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Sticky mobile call/book bar -->
+  <div class="mobile-cta-bar">
+    <a href="tel:4189602558" class="bar-call">📞 &nbsp;418-960-2558</a>
+    <a href="https://barbershop-annie.square.site/?utm_id=97758_v0_s00_e0_tv0" target="_blank" rel="noopener" class="bar-book">Prendre RDV →</a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
